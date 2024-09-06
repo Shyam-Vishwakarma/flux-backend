@@ -1,0 +1,122 @@
+[
+  {
+    "symbol": "BTC",
+    "name": "Bitcoin"
+  },
+  {
+    "symbol": "ETH",
+    "name": "Ethereum"
+  },
+  {
+    "symbol": "BNB",
+    "name": "Binance Coin"
+  },
+  {
+    "symbol": "XRP",
+    "name": "XRP"
+  },
+  {
+    "symbol": "USDT",
+    "name": "Tether"
+  },
+  {
+    "symbol": "ADA",
+    "name": "Cardano"
+  },
+  {
+    "symbol": "DOGE",
+    "name": "Dogecoin"
+  },
+  {
+    "symbol": "SOL",
+    "name": "Solana"
+  },
+  {
+    "symbol": "MATIC",
+    "name": "Polygon"
+  },
+  {
+    "symbol": "DOT",
+    "name": "Polkadot"
+  },
+  {
+    "symbol": "SHIB",
+    "name": "Shiba Inu"
+  },
+  {
+    "symbol": "TRX",
+    "name": "TRON"
+  },
+  {
+    "symbol": "LTC",
+    "name": "Litecoin"
+  },
+  {
+    "symbol": "AVAX",
+    "name": "Avalanche"
+  },
+  {
+    "symbol": "UNI",
+    "name": "Uniswap"
+  },
+  {
+    "symbol": "LINK",
+    "name": "Chainlink"
+  },
+  {
+    "symbol": "ATOM",
+    "name": "Cosmos"
+  },
+  {
+    "symbol": "XLM",
+    "name": "Stellar"
+  },
+  {
+    "symbol": "ETC",
+    "name": "Ethereum Classic"
+  },
+  {
+    "symbol": "ALGO",
+    "name": "Algorand"
+  },
+  {
+    "symbol": "VET",
+    "name": "VeChain"
+  },
+  {
+    "symbol": "HBAR",
+    "name": "Hedera"
+  },
+  {
+    "symbol": "FIL",
+    "name": "Filecoin"
+  },
+  {
+    "symbol": "ICP",
+    "name": "Internet Computer"
+  },
+  {
+    "symbol": "NEAR",
+    "name": "NEAR Protocol"
+  },
+  {
+    "symbol": "GRT",
+    "name": "The Graph"
+  },
+  {
+    "symbol": "AAVE",
+    "name": "Aave"
+  },
+  {
+    "symbol": "MANA",
+    "name": "Decentraland"
+  },
+  {
+    "symbol": "SAND",
+    "name": "The Sandbox"
+  },
+  {
+    "symbol": "FTM",
+    "name": "Fantom"
+  }
+]

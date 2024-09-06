@@ -1,0 +1,108 @@
+[
+  {
+    "symbol": "AAPL",
+    "name": "Apple Inc."
+  },
+  {
+    "symbol": "MSFT",
+    "name": "Microsoft Corporation"
+  },
+  {
+    "symbol": "AMZN",
+    "name": "Amazon.com, Inc."
+  },
+  {
+    "symbol": "GOOGL",
+    "name": "Alphabet Inc. (Class A)"
+  },
+  {
+    "symbol": "TSLA",
+    "name": "Tesla, Inc."
+  },
+  {
+    "symbol": "META",
+    "name": "Meta Platforms, Inc."
+  },
+  {
+    "symbol": "NVDA",
+    "name": "NVIDIA Corporation"
+  },
+  {
+    "symbol": "JPM",
+    "name": "JPMorgan Chase & Co."
+  },
+
+  {
+    "symbol": "DIS",
+    "name": "The Walt Disney Company"
+  },
+
+  {
+    "symbol": "INTC",
+    "name": "Intel Corporation"
+  },
+  {
+    "symbol": "KO",
+    "name": "Coca-Cola Company"
+  },
+  {
+    "symbol": "CSCO",
+    "name": "Cisco Systems, Inc."
+  },
+  {
+    "symbol": "MCD",
+    "name": "McDonald's Corporation"
+  },
+  {
+    "symbol": "RELIANCE",
+    "name": "Reliance Industries Limited"
+  },
+  {
+    "symbol": "TCS",
+    "name": "Tata Consultancy Services"
+  },
+  {
+    "symbol": "HDFCBANK",
+    "name": "HDFC Bank Limited"
+  },
+  {
+    "symbol": "INFY",
+    "name": "Infosys Limited"
+  },
+  {
+    "symbol": "ICICIBANK",
+    "name": "ICICI Bank Limited"
+  },
+  {
+    "symbol": "SBIN",
+    "name": "State Bank of India"
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "name": "Bajaj Finance Limited"
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "name": "Hindustan Unilever Limited"
+  },
+  {
+    "symbol": "ITC",
+    "name": "ITC Limited"
+  },
+  {
+    "symbol": "LT",
+    "name": "Larsen & Toubro Limited"
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "name": "Bharti Airtel Limited"
+  },
+  {
+    "symbol": "KOTAKBANK",
+    "name": "Kotak Mahindra Bank Limited"
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "name": "Asian Paints Limited"
+  }
+]

@@ -1,5 +1,6 @@
 package com.example.flux.model;
 
+import jakarta.persistence.Column;
 import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.Entity;
@@ -13,7 +14,7 @@ public class QuoteData {
     @Id
     private String symbol;
 
-    @Lob
+    @Column(columnDefinition = "TEXT")
     private String jsonData;
 
     @CreationTimestamp

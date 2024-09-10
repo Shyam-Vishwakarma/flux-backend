@@ -2,6 +2,7 @@ package com.example.flux.service;
 
 import com.example.flux.model.QuoteData;
 import com.example.flux.repository.QuoteDataRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -61,34 +62,36 @@ public class StockService {
                 .fetchSync();
     }
 
-@Autowired
-private QuoteDataRepository quoteDataRepository;
-    @Value("${API_KEY_FINANCIAL_MODELING_PREMIUM}")
-    private String financialModelingApiKey;
+    @Autowired
+    private QuoteDataRepository quoteDataRepository;
+    @Autowired
+    private QuoteDataService quoteDataService;
+    private String financialModelingApiKey = "OiwJlrSylZmn1l3fleCYoF6b2IeMtTxQ";
 
+    @Transactional
     public String getQuoteData(String symbol) {
         QuoteData existingData = quoteDataRepository.findBySymbol(symbol);
         LocalDateTime currentTime = LocalDateTime.now();
-        Duration fourHours = Duration.ofHours(4);
+        Duration cacheDuration = Duration.ofHours(4);
 
-        if (existingData != null) {
-            LocalDateTime dataTimestamp = existingData.getCreatedDate();
-            if (dataTimestamp != null && Duration.between(dataTimestamp, currentTime).compareTo(fourHours) < 0) {
-                return existingData.getJsonData();
-            }
+        if (existingData != null && isDataFresh(existingData.getCreatedDate(), currentTime, cacheDuration)) {
+            return existingData.getJsonData();
         }
 
-        String url = String.format("https://financialmodelingprep.com/api/v3/quote-order/%s?apikey=%s", symbol, financialModelingApiKey);
-        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
-        String apiResponse = response.getBody();
-
-        QuoteData newQuoteData = new QuoteData();
-        newQuoteData.setSymbol(symbol);
-        newQuoteData.setJsonData(apiResponse);
-        newQuoteData.setCreatedDate(currentTime);
-        quoteDataRepository.save(newQuoteData);
+        String apiResponse = fetchQuoteDataFromApi(symbol);
+        quoteDataService.saveQuoteData(symbol, apiResponse);
 
         return apiResponse;
+    }
+
+    private boolean isDataFresh(LocalDateTime dataTimestamp, LocalDateTime currentTime, Duration cacheDuration) {
+        return dataTimestamp != null && Duration.between(dataTimestamp, currentTime).compareTo(cacheDuration) < 0;
+    }
+
+    private String fetchQuoteDataFromApi(String symbol) {
+        String url = String.format("https://financialmodelingprep.com/api/v3/quote-order/%s?apikey=%s", symbol, financialModelingApiKey);
+        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+        return response.getBody();
     }
 
 }

@@ -9,8 +9,7 @@ import jakarta.annotation.PostConstruct;
 
 @Service
 public class AlphaVantageService {
-    @Value("${API_KEY_ALPHAVANTAGE}")
-    private String alphaVantageApiKey;
+    private String alphaVantageApiKey = "8XDOS573QPTOK73I";
     @PostConstruct
     public void init() {
         Config cfg = Config.builder()

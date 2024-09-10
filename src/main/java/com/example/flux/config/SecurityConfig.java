@@ -33,7 +33,6 @@ public class SecurityConfig {
                 .securityMatcher("/**")
 
                 .authorizeHttpRequests(registry -> registry
-                        .requestMatchers("/api/h2-console/**").permitAll()
                         .requestMatchers("/**").permitAll()
                         .requestMatchers("/api/auth/**").permitAll() // Allow auth endpoints without authentication
                         .requestMatchers("/api/**").permitAll() // Allow other API endpoints

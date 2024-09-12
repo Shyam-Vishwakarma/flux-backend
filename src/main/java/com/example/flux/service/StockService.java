@@ -22,11 +22,6 @@ import java.time.LocalDateTime;
 public class StockService {
     private final RestTemplate restTemplate = new RestTemplate();
 
-    @PostConstruct
-    public void init() {
-        // Initialization logic if needed
-    }
-
     public TimeSeriesResponse getIntradayData(String symbol) {
         return AlphaVantage.api()
                 .timeSeries()
@@ -66,7 +61,9 @@ public class StockService {
     private QuoteDataRepository quoteDataRepository;
     @Autowired
     private QuoteDataService quoteDataService;
-    private String financialModelingApiKey = "OiwJlrSylZmn1l3fleCYoF6b2IeMtTxQ";
+
+    @Value("${api.key1}")
+    private String financialModelingApiKey;
 
     @Transactional
     public String getQuoteData(String symbol) {
